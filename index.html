@@ -1098,11 +1098,11 @@
 			<div class="padding"></div>
 			</div>
 		</div>
-		<div id="touchmenu" style="margin:100px;">
+		<div id="touchmenu">
 			<div>Enter start and end time:</div>
 			<label for="start">Start:</label>
-			<div id="start">
-				<select id="day">
+			<div class="selection-wrapper" id="start">
+				<select id="startday">
 					<option value="sun">Sun</option>
 					<option value="mon">Mon</option>
 					<option value="tue">Tue</option>
@@ -1111,16 +1111,20 @@
 					<option value="fri">Fri</option>
 					<option value="sat">Sat</option>
 				</select>
-				<input type="text" id="hour" maxlength="2">:
-				<input type="text" id="minute" maxlength="2">
-				<select id="ampm">
+				<div class="timeselect">
+					<input type="text" id="starthour" maxlength="2">
+				</div>:
+				<div class="timeselect">
+					<input type="text" id="startminute" maxlength="2">
+				</div>
+				<select id="ampmstart">
 					<option value="am">AM</option>
 					<option value="pm">PM</option>
 				</select>
 			</div>
 			<label for="end">End:</label>
-			<div id="end">
-				<select id="day">
+			<div class="selection-wrapper" id="end">
+				<select id="endday">
 					<option value="sun">Sun</option>
 					<option value="mon">Mon</option>
 					<option value="tue">Tue</option>
@@ -1129,9 +1133,15 @@
 					<option value="fri">Fri</option>
 					<option value="sat">Sat</option>
 				</select>
-				<input type="text" id="hour" maxlength="2">:
-				<input type="text" id="minute" maxlength="2">
-				<select id="ampm">
+				<div class="timeselect">
+					<input type="text" id="endhour" maxlength="2">
+				</div>:
+				<div class="timeselect">
+					<div class="selectup"></div>
+					<input type="text" id="endminute" maxlength="2">
+					<div class="selectdown"></div>
+				</div>
+				<select id="ampmend">
 					<option value="am">AM</option>
 					<option value="pm">PM</option>
 				</select>

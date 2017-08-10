@@ -385,15 +385,20 @@ span {
 
 /* POP UP MENU CSS */
 #touchmenu {
+	margin: 100px;
 	/*display: none;*/
 }
 
-#hour, #minute {
+.selection-wrapper {
+	display: flex;
+}
+
+#starthour, #startminute, #endhour, #endminute {
 	margin: 0;
 	padding: 3px;
 	width: 2.1em;
 }
 
-#hour {
+#starthour, #endhour {
 	text-align: right;
 }
