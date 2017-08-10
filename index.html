@@ -1099,33 +1099,42 @@
 			</div>
 		</div>
 		<div id="touchmenu" style="margin:100px;">
-			Select start and end time:
-		</br>
+			<div>Enter start and end time:</div>
 			<label for="start">Start:</label>
 			<div id="start">
 				<select id="day">
-					<option value="">Sun</option>
-					<option value="">Mon</option>
-					<option value="">Tue</option>
-					<option value="">Wed</option>
-					<option value="">Thu</option>
-					<option value="">Fri</option>
-					<option value="">Sat</option>
+					<option value="sun">Sun</option>
+					<option value="mon">Mon</option>
+					<option value="tue">Tue</option>
+					<option value="wed">Wed</option>
+					<option value="thu">Thu</option>
+					<option value="fri">Fri</option>
+					<option value="sat">Sat</option>
 				</select>
-				<input type="time" step="1800">
+				<input type="text" id="hour">:
+				<input type="text" id="minute">
+				<select id="ampm">
+					<option value="am">AM</option>
+					<option value="pm">PM</option>
+				</select>
 			</div>
 			<label for="end">End:</label>
 			<div id="end">
 				<select id="day">
-					<option value="">Sun</option>
-					<option value="">Mon</option>
-					<option value="">Tue</option>
-					<option value="">Wed</option>
-					<option value="">Thu</option>
-					<option value="">Fri</option>
-					<option value="">Sat</option>
+					<option value="sun">Sun</option>
+					<option value="mon">Mon</option>
+					<option value="tue">Tue</option>
+					<option value="wed">Wed</option>
+					<option value="thu">Thu</option>
+					<option value="fri">Fri</option>
+					<option value="sat">Sat</option>
 				</select>
-				<input type="time" step="1800">
+				<input type="text" id="hour">:
+				<input type="text" id="minute">
+				<select id="ampm">
+					<option value="am">AM</option>
+					<option value="pm">PM</option>
+				</select>
 			</div>
 			<button type="button" id="confirm">Confirm</button>
 			<button type="button" id="cancel">Cancel</button>
