@@ -387,18 +387,60 @@ span {
 #touchmenu {
 	margin: 100px;
 	/*display: none;*/
+	position: fixed;
+	background-color: lightgray;
+	padding: 20px;
+	z-index: 99;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .selection-wrapper {
 	display: flex;
+	align-items: center;
 }
 
 #starthour, #startminute, #endhour, #endminute {
-	margin: 0;
+	margin: 3px 0;
 	padding: 3px;
 	width: 2.1em;
 }
 
 #starthour, #endhour {
 	text-align: right;
+}
+
+#confirm, #cancel {
+	padding: 5px;
+	width: 40%;
+}
+
+.arrow {
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+.timeselect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px 2px;
+}
+
+.time-label {
+	width: 6ex;
+}
+
+.up {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #448;
+}
+
+.down {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #448;
 }
