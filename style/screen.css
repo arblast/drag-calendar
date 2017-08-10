@@ -391,9 +391,8 @@ span {
 	background-color: lightgray;
 	padding: 20px;
 	z-index: 99;
-	left: 50%;
-	top: 50%;
-	transform: translate(-75%, -75%);
+	left: 20%;
+	top: 20%;
 }
 
 .selection-wrapper {
@@ -434,15 +433,15 @@ span {
 }
 
 .up {
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid #448;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 13px solid #448;
 }
 
 .down {
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid #448;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-top: 13px solid #448;
 }
 
 .button-container {
