@@ -382,3 +382,18 @@ span {
 .box-title {
 	font-size: 1.5em;
 }
+
+/* POP UP MENU CSS */
+#touchmenu {
+	/*display: none;*/
+}
+
+#hour, #minute {
+	margin: 0;
+	padding: 3px;
+	width: 2.1em;
+}
+
+#hour {
+	text-align: right;
+}
