@@ -456,3 +456,10 @@ span {
 	border-color: lightgray;
 	border-style: solid;
 }
+
+#toucherror {
+	height: 1em;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	color: red;
+}
