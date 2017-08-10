@@ -444,3 +444,8 @@ span {
 	border-right: 10px solid transparent;
 	border-top: 10px solid #448;
 }
+
+.button-container {
+	display: flex;
+	justify-content: space-around;
+}
