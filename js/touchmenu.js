@@ -16,6 +16,7 @@ $(document).ready(() => {
     }
     setStartTime(fields);
     resetEndTime();
+    clearErrors();
     setTimeout(showTouchMenu, 350);
   });
 
@@ -109,6 +110,10 @@ $(".down").on('click', function() {
 
   function displayError(message) {
     $("#toucherror").html(message);
+  }
+
+  function clearErrors() {
+    $("#toucherror").html("");
   }
 
   function selectBoxes(start, end) {

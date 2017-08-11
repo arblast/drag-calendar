@@ -452,6 +452,10 @@ span {
 	border-style: solid;
 }
 
+.minute:disabled {
+	color: black;
+}
+
 #toucherror {
 	height: 1em;
 	margin-top: 2px;
