@@ -24,6 +24,8 @@ $(document).ready(() => {
     hideTouchMenu();
   });
 
+//confirm button
+
   $("#confirm").on('click', () => {
     if(checkInputs()) {
       let startID = getID(
@@ -44,6 +46,28 @@ $(document).ready(() => {
       hideTouchMenu();
     }
   });
+
+//updown buttons
+
+$(".up").on('click', function() {
+  let input = $(this).siblings("input");
+    if(input.hasClass("minute")) {
+      toggleMinute(input);
+    } else {
+      increaseHour(input);
+    }
+  }
+);
+
+$(".down").on('click', function() {
+  let input = $(this).siblings("input");
+    if(input.hasClass("minute")) {
+      toggleMinute(input);
+    } else {
+      decreaseHour(input);
+    }
+  }
+);
 
 //helper functions
 
@@ -95,6 +119,32 @@ $(document).ready(() => {
     };
     for(let i = start; i < end; i++) {
       allCells[i].checked = true;
+    }
+  }
+
+  function toggleMinute(input) {
+    if(input.val() === "00") {
+      input.val("30");
+    } else {
+      input.val("00");
+    }
+  }
+
+  function increaseHour(input) {
+    let value = parseInt(input.val())
+    if( value < 12 && value > 0) {
+      input.val(value + 1);
+    } else {
+      input.val(1);
+    }
+  }
+
+  function decreaseHour(input) {
+    let value = parseInt(input.val())
+    if( value < 13 && value > 1) {
+      input.val(value - 1);
+    } else {
+      input.val(12);
     }
   }
 
