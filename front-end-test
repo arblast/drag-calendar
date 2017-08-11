@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Sphere simplifies your life through automation."/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0001">
-		<link rel="icon" type="image/png" href="/images/icon.png"/>
+		<link rel="icon" type="image/png" href="https://www.sphere.ms/images/icon.png"/>
 		<link href="style/screen.css" rel="stylesheet" type="text/css" media="screen"/>
 	</head>
 	<body>
@@ -1098,9 +1098,69 @@
 			<div class="padding"></div>
 			</div>
 		</div>
+		<div id="touchmenu">
+			<div>Enter start and end time:</div>
+			<div class="selection-wrapper" id="start">
+				<label class="time-label" for="start">Start:</label>
+				<select id="startday">
+					<option value="sun">Sun</option>
+					<option value="mon">Mon</option>
+					<option value="tue">Tue</option>
+					<option value="wed">Wed</option>
+					<option value="thu">Thu</option>
+					<option value="fri">Fri</option>
+					<option value="sat">Sat</option>
+				</select>
+				<div class="timeselect">
+					<div class="arrow up"></div>
+					<input type="text" id="starthour" maxlength="2">
+					<div class="arrow down"></div>
+				</div>:
+				<div class="timeselect">
+					<div class="arrow up"></div>
+					<input type="text" class="minute" id="startminute" maxlength="2" disabled>
+					<div class="arrow down"></div>
+				</div>
+				<select id="ampmstart">
+					<option value="am">AM</option>
+					<option value="pm">PM</option>
+				</select>
+			</div>
+			<div class="selection-wrapper" id="end">
+				<label class="time-label" for="end">End:</label>
+				<select id="endday">
+					<option value="sun">Sun</option>
+					<option value="mon">Mon</option>
+					<option value="tue">Tue</option>
+					<option value="wed">Wed</option>
+					<option value="thu">Thu</option>
+					<option value="fri">Fri</option>
+					<option value="sat">Sat</option>
+				</select>
+				<div class="timeselect">
+					<div class="arrow up"></div>
+					<input type="text" id="endhour" maxlength="2">
+					<div class="arrow down"></div>
+				</div>:
+				<div class="timeselect">
+					<div class="arrow up"></div>
+					<input type="text" class="minute" id="endminute" maxlength="2" disabled>
+					<div class="arrow down"></div>
+				</div>
+				<select id="ampmend">
+					<option value="am">AM</option>
+					<option value="pm">PM</option>
+				</select>
+			</div>
+			<div id="toucherror"></div>
+			<div class="button-container">
+				<button type="button" id="confirm">Confirm</button>
+				<button type="button" id="cancel">Cancel</button>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/no-touch.js"></script>
 		<script type="text/javascript" src="js/shiftcheckbox.js"></script>
 		<script type="text/javascript" src="js/dragcheckbox.js"></script>
+		<script type="text/javascript" src="js/touchmenu.js"></script>
 	</body>
 </html>
