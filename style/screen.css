@@ -403,10 +403,7 @@ span {
 	margin: 3px 0;
 	padding: 3px;
 	width: 2.1em;
-}
-
-#starthour, #endhour {
-	text-align: right;
+	text-align: center;
 }
 
 #confirm, #cancel {
