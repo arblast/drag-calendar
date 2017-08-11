@@ -25,22 +25,24 @@ $(document).ready(() => {
   });
 
   $("#confirm").on('click', () => {
-    let startID = getID(
-      $("#startday").val(),
-      $("#starthour").val(),
-      $("#startminute").val(),
-      $("#ampmstart").val()
-    )
-    let endID = getID(
-      $("#endday").val(),
-      $("#endhour").val(),
-      $("#endminute").val(),
-      $("#ampmend").val()
-    )
-    startIndex = allCells.index($(`#${startID}`));
-    endIndex = allCells.index($(`#${endID}`));
-    selectBoxes(startIndex, endIndex);
-    hideTouchMenu();
+    if(checkInputs()) {
+      let startID = getID(
+        $("#startday").val(),
+        $("#starthour").val(),
+        $("#startminute").val(),
+        $("#ampmstart").val()
+      )
+      let endID = getID(
+        $("#endday").val(),
+        $("#endhour").val(),
+        $("#endminute").val(),
+        $("#ampmend").val()
+      )
+      startIndex = allCells.index($(`#${startID}`));
+      endIndex = allCells.index($(`#${endID}`));
+      selectBoxes(startIndex, endIndex);
+      hideTouchMenu();
+    }
   });
 
 //helper functions
@@ -67,13 +69,31 @@ $(document).ready(() => {
     $("#ampmend").val("am");
   }
 
+  function checkInputs() {
+    let starthour = parseInt($("#starthour").val());
+    let endhour = parseInt($("#endhour").val());
+    if(isNaN(starthour) || isNaN(endhour)) {
+      displayError("Invalid Input: Hours must be valid numbers.");
+      return false;
+    } else if(starthour < 1 || starthour > 12 || endhour < 1 || endhour > 12) {
+      displayError("Invalid Input: Hours must be between 1 and 12.");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function displayError(message) {
+    $("#toucherror").html(message);
+  }
+
   function selectBoxes(start, end) {
     if(start > end) {
       let temp = start;
       start = end;
       end = temp;
     };
-    for(let i=start; i<=end; i++) {
+    for(let i = start; i < end; i++) {
       allCells[i].checked = true;
     }
   }
