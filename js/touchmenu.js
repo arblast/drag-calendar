@@ -27,7 +27,7 @@ $(document).ready(() => {
 
 //confirm button
 
-  $("#confirm").on('click', () => {
+  $("#confirm").on('click', (e) => {
     if(checkInputs()) {
       let startID = getID(
         $("#startday").val(),
@@ -95,8 +95,8 @@ $(".down").on('click', function() {
   }
 
   function checkInputs() {
-    let starthour = parseInt($("#starthour").val());
-    let endhour = parseInt($("#endhour").val());
+    let starthour = $("#starthour").val();
+    let endhour = $("#endhour").val();
     if(isNaN(starthour) || isNaN(endhour)) {
       displayError("Invalid Input: Hours must be valid numbers.");
       return false;
