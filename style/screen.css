@@ -385,14 +385,13 @@ span {
 
 /* POP UP MENU CSS */
 #touchmenu {
-	margin: 100px;
-	/*display: none;*/
+	display: none;
 	position: fixed;
 	background-color: lightgray;
 	padding: 20px;
 	z-index: 99;
-	left: 15%;
-	top: 15%;
+	left: 5%;
+	top: 10%;
 }
 
 .selection-wrapper {
