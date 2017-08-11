@@ -1,10 +1,14 @@
 $(document).ready(() => {
-
   let touchmenu = $("#touchmenu");
   let allCells = $(".time").children();
 
 //opens touch menu, timer to prevent onclick from firing at same time
 //set default values of day/time to clicked element
+  $( window ).resize(function() { //hide  menu if window resizes to hide calendar
+    if($(window).width() < 480) {
+      hideTouchMenu();
+    }
+  });
 
   $("#calendar").on('touchstart', (e) => {
     let target = e.target;
@@ -94,6 +98,7 @@ $(".down").on('click', function() {
     $("#ampmend").val("am");
   }
 
+//checks validity of inputs before confirmation
   function checkInputs() {
     let starthour = $("#starthour").val();
     let endhour = $("#endhour").val();
@@ -116,6 +121,7 @@ $(".down").on('click', function() {
     $("#toucherror").html("");
   }
 
+//function to check all boxes within a certain range
   function selectBoxes(start, end) {
     if(start > end) {
       let temp = start;
