@@ -449,6 +449,7 @@ span {
 	background-color: lightgray;
 	color: black;
 	-webkit-text-fill-color: black;
+	-webkit-opacity: 1;
 	border-color: lightgray;
 	border-style: solid;
 }
